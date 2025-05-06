@@ -8,6 +8,7 @@
             pkgs.git
             pkgs.neovim
         ];
+	file.".config" = { source = ./config; recursive = true; };
     };
 
     # Ensure programs are using ~/.config rather than /Users/michitanaka/Library/...
