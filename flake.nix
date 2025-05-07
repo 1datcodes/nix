@@ -48,9 +48,11 @@
 		dock.minimize-to-application = true;
 		dock.persistent-apps = [
 			"${pkgs.vscode}/Applications/Visual Studio Code.app"
-			"/Applications/Brave Browser.app"
 			"/System/Applications/Utilities/Terminal.app"
+			"/Applications/Brave Browser.app"
 			"/System/Applications/Messages.app"
+			"${pkgs.discord}/Applications/discord.app"
+			"/Applications/Spotify.app"
 		];
 		finder.FXPreferredViewStyle = "clmv";
 		loginwindow.GuestEnabled = false;
