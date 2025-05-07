@@ -33,6 +33,7 @@
 		casks = [
 			"brave-browser"
 			"1password@7"
+			"spotify"
 		];
 		masApps = {
 		};
@@ -78,6 +79,10 @@
 
       # Enable alternative shell support in nix-darwin.
       programs.fish.enable = true;
+	environment.shells = [pkgs.fish];
+	users.users.michitanaka = {
+		shell = pkgs.fish;
+	};
 
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
