@@ -59,8 +59,8 @@
 		NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = false;
 		NSGlobalDomain.KeyRepeat = 2;
 		NSGlobalDomain.AppleTemperatureUnit = "Celsius";
-		NGGlobalDomain.AppleMeasurementUnits = "Centimeters";
-		NGGlobalDomain.AppleMetricUnits = 1;
+		NSGlobalDomain.AppleMeasurementUnits = "Centimeters";
+		NSGlobalDomain.AppleMetricUnits = 1;
 		finder._FXShowPosixPathInTitle = true;
 		finder.CreateDesktop = false;
 		finder.NewWindowTarget = "Home";
