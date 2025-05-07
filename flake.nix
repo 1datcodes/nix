@@ -1,5 +1,4 @@
-{
-  description = "Zenful nix-darwin system flake";
+{ description = "Zenful nix-darwin system flake";
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
@@ -21,6 +20,7 @@
 	  pkgs.git-lfs
 	  pkgs.git-credential-manager
 	  pkgs.vscode
+	  pkgs.discord
 	  pkgs.neovim
 	  pkgs.fish
         ];
@@ -39,6 +39,21 @@
 		onActivation.cleanup = "zap";
 		onActivation.autoUpdate = true;
 		onActivation.upgrade = true;
+	};
+
+	system.defaults = {
+		dock.autohide = true;
+		dock.persistent-apps = [
+			"${pkgs.vscode}/Applications/Visual Studio Code.app"
+			"/Applications/Brave Browser.app"
+			"/System/Applications/Utilities/Terminal.app"
+			"/System/Applications/Messages.app"
+		];
+		finder.FXPreferredViewStyle = "clmv";
+		loginwindow.GuestEnabled = false;
+		NSGlobalDomain.AppleICUForce24HourTime = true;
+		NSGlobalDomain.AppleInterfaceStyle = "Dark";
+		NSGlobalDomain.KeyRepeat = 2;
 	};
 
       # Necessary for using flakes on this system.
