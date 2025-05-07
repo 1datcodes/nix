@@ -7,6 +7,7 @@
         packages = [
             pkgs.git
             pkgs.neovim
+	    pkgs.git-lfs
         ];
 	file.".config" = { source = ./config; recursive = true; };
     };
