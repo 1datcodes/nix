@@ -29,6 +29,8 @@
 	homebrew = { enable = true;
 		brews = [
 			"mas"
+			"npm"
+			"node"
 		];
 		casks = [
 			"brave-browser"
