@@ -44,6 +44,8 @@
 
 	system.defaults = {
 		dock.autohide = true;
+		dock.autohide-delay = 0.15;
+		dock.minimize-to-application = true;
 		dock.persistent-apps = [
 			"${pkgs.vscode}/Applications/Visual Studio Code.app"
 			"/Applications/Brave Browser.app"
