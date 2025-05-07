@@ -8,6 +8,7 @@
             pkgs.git
             pkgs.neovim
 	    pkgs.git-lfs
+	    pkgs.git-credential-manager
         ];
 	file.".config" = { source = ./config; recursive = true; };
     };
