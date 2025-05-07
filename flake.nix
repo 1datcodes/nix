@@ -18,8 +18,11 @@
       environment.systemPackages =
         [ 
 	  pkgs.git
+	  pkgs.git-lfs
+	  pkgs.git-credential-manager
 	  pkgs.vscode
 	  pkgs.neovim
+	  pkgs.fish
         ];
 
 	homebrew = {
