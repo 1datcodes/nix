@@ -21,6 +21,7 @@
 	  pkgs.git-credential-manager
 	  pkgs.vscode
 	  pkgs.discord
+	  pkgs.raycast
 	  pkgs.neovim
 	  pkgs.fish
         ];
@@ -55,6 +56,8 @@
 		NSGlobalDomain.AppleInterfaceStyle = "Dark";
 		NSGlobalDomain.KeyRepeat = 2;
 	};
+
+	security.pam.services.sudo_local.touchIdAuth = true;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
