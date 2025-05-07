@@ -55,6 +55,10 @@
 		NSGlobalDomain.AppleICUForce24HourTime = true;
 		NSGlobalDomain.AppleInterfaceStyle = "Dark";
 		NSGlobalDomain.KeyRepeat = 2;
+		finder._FXShowPosixPathInTitle = true;
+		finder.CreateDesktop = false;
+		finder.NewWindowTarget = "Home";
+		finder.ShowStatusBar = true;
 	};
 
 	security.pam.services.sudo_local.touchIdAuth = true;
