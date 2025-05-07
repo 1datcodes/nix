@@ -56,11 +56,20 @@
 		loginwindow.GuestEnabled = false;
 		NSGlobalDomain.AppleICUForce24HourTime = true;
 		NSGlobalDomain.AppleInterfaceStyle = "Dark";
+		NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = false;
 		NSGlobalDomain.KeyRepeat = 2;
+		NSGlobalDomain.AppleTemperatureUnit = "Celsius";
+		NGGlobalDomain.AppleMeasurementUnits = "Centimeters";
+		NGGlobalDomain.AppleMetricUnits = 1;
 		finder._FXShowPosixPathInTitle = true;
 		finder.CreateDesktop = false;
 		finder.NewWindowTarget = "Home";
 		finder.ShowStatusBar = true;
+		menuExtraClock.ShowSeconds = true;
+		menuExtraClock.Show24Hour = true;
+		trackpad.Clicking = true;
+		trackpad.TrackpadThreeFingerDrag = true;
+		WindowManager.StandardHideDesktopIcons = true;
 	};
 
 	security.pam.services.sudo_local.touchIdAuth = true;
