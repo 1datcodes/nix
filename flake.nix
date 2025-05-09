@@ -72,7 +72,6 @@
 		menuExtraClock.ShowSeconds = true;
 		menuExtraClock.Show24Hour = true;
 		trackpad.Clicking = true;
-		trackpad.TrackpadThreeFingerDrag = true;
 		WindowManager.StandardHideDesktopIcons = true;
 	};
 
