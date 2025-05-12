@@ -117,6 +117,8 @@
 	home.sessionVariables = {
 		EDITOR = "vim";
 	};
+
+	home.file.".vimrc".source = ./dotfiles/vim_config;
 };
   in
   {
