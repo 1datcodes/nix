@@ -98,6 +98,9 @@
 		home = "/Users/michitanaka";
 	};
 
+	# Fonts
+
+
       # Set Git commit hash for darwin-version.
       system.configurationRevision = self.rev or self.dirtyRev or null;
 
@@ -115,7 +118,12 @@
 	# Let home-manager install and manage itself
 	programs.home-manager.enable = true;
 
-	home.packages = with pkgs; [];
+	home.packages = with pkgs; [
+		pkgs.nerd-fonts._0xproto
+		pkgs.nerd-fonts.droid-sans-mono
+	];
+
+	fonts.fontconfig.enable = true;
 
 	home.sessionVariables = {
 		EDITOR = "vim";
@@ -131,6 +139,7 @@
 		shellAliases = {
 		};
 	};
+
 };
 
   in
