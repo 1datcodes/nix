@@ -78,6 +78,11 @@
 		WindowManager.StandardHideDesktopIcons = true;
 	};
 
+	users.users.michitanaka = {
+		name = "michitanaka";
+		home = "/Users/michitanaka";
+	};
+
 	security.pam.services.sudo_local.touchIdAuth = true;
 
       # Necessary for using flakes on this system.
@@ -133,7 +138,7 @@
 		home-manager.useGlobalPkgs = true;
 		home-manager.useUserPackages = true;
 		home-manager.verbose = true;
-		home-manager.users.$USER = homeconfig;
+		home-manager.users.michitanaka = homeconfig;
 	}
 	];
     };
