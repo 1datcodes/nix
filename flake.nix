@@ -119,6 +119,7 @@
 	programs.home-manager.enable = true;
 
 	home.packages = with pkgs; [
+		pkgs.nerd-fonts.jetbrains-mono
 		pkgs.nerd-fonts._0xproto
 		pkgs.nerd-fonts.droid-sans-mono
 	];
