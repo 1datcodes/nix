@@ -24,6 +24,7 @@
 	  pkgs.raycast
 	  pkgs.neovim
 	  pkgs.fish
+	  pkgs.alacritty
         ];
 
 	homebrew = { enable = true;
