@@ -88,9 +88,6 @@
 		enable = true;
 	};
 	environment.shells = [pkgs.fish];
-	environment.shellAliases = {
-		darwin-switch = "darwin-rebuild switch --flake ~/nix#mac";
-	};
 	
 	users.users.michitanaka = {
 		shell = pkgs.fish;
