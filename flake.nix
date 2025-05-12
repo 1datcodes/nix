@@ -5,10 +5,12 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     mac-app-util.url = "github:hraban/mac-app-util";
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    home-manager.url="github:nix-community/home-manager";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, mac-app-util, nix-homebrew, nixpkgs }:
+  outputs = inputs@{ self, nix-darwin, home-manager, mac-app-util, nix-homebrew, nixpkgs }:
   let
     configuration = { pkgs, config, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -98,6 +100,19 @@
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
     };
+    homeconfig = {pkgs, config, ...}: {
+    	# Internal compatibility configuration
+	# for home-manager, don't change this
+	home.stateVersion = "23.05";
+	# Let home-manager install and manage itself
+	programs.home-manager.enable = true;
+
+	home.packages = with pkgs; [];
+
+	home.sessionVariables = {
+		EDITOR = "vim";
+	};
+};
   in
   {
     # Build darwin flake using:
@@ -113,6 +128,12 @@
 			enableRosetta = true;
 			user = "michitanaka";
 		};
+	}
+	home-manager.darwinModules.home-manager {
+		home-manager.useGlobalPkgs = true;
+		home-manager.useUserPackages = true;
+		home-manager.verbose = true;
+		home-manager.users.$USER = homeconfig;
 	}
 	];
     };
