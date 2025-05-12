@@ -86,11 +86,11 @@
       # Enable alternative shell support in nix-darwin.
 	programs.fish = {
 		enable = true;
-		shellAliases = {
-			switch = "darwin-rebuild switch --flake ~/nix#mac";
-		};
 	};
 	environment.shells = [pkgs.fish];
+	environment.shellAliases = {
+		darwin-switch = "darwin-rebuild switch --flake ~/nix#mac";
+	};
 	
 	users.users.michitanaka = {
 		shell = pkgs.fish;
