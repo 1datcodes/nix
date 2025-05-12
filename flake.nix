@@ -78,21 +78,23 @@
 		WindowManager.StandardHideDesktopIcons = true;
 	};
 
-	users.users.michitanaka = {
-		name = "michitanaka";
-		home = "/Users/michitanaka";
-	};
-
 	security.pam.services.sudo_local.touchIdAuth = true;
 
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
       # Enable alternative shell support in nix-darwin.
-      programs.fish.enable = true;
+	programs.fish = {
+		enable = true;
+		shellAliases = {
+		switch = "darwin-rebuild switch --flake ~/nix#mac";
+	}
 	environment.shells = [pkgs.fish];
+	
 	users.users.michitanaka = {
 		shell = pkgs.fish;
+		name = "michitanaka";
+		home = "/Users/michitanaka";
 	};
 
       # Set Git commit hash for darwin-version.
@@ -118,7 +120,9 @@
 		EDITOR = "vim";
 	};
 
-	home.file.".vimrc".source = ./dotfiles/vim_config;
+	home.file = {
+		".vimrc".source = ./dotfiles/vim_config;
+	};
 };
   in
   {
