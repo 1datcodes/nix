@@ -86,6 +86,9 @@
       # Enable alternative shell support in nix-darwin.
 	programs.fish = {
 		enable = true;
+		shellAliases = {
+
+		};
 	};
 	environment.shells = [pkgs.fish];
 	
@@ -120,6 +123,13 @@
 
 	home.file = {
 		".vimrc".source = ./dotfiles/vim_config;
+	};
+	
+	# adding alias to fish
+	programs.fish = {
+		enable = true;
+		shellAliases = {
+		};
 	};
 };
 
