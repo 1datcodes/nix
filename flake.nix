@@ -87,8 +87,9 @@
 	programs.fish = {
 		enable = true;
 		shellAliases = {
-		switch = "darwin-rebuild switch --flake ~/nix#mac";
-	}
+			switch = "darwin-rebuild switch --flake ~/nix#mac";
+		};
+	};
 	environment.shells = [pkgs.fish];
 	
 	users.users.michitanaka = {
@@ -124,6 +125,7 @@
 		".vimrc".source = ./dotfiles/vim_config;
 	};
 };
+
   in
   {
     # Build darwin flake using:
