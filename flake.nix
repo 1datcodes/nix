@@ -39,6 +39,7 @@
 			"brave-browser"
 			"1password@7"
 			"spotify"
+			"steam"
 		];
 		masApps = {
 		};
