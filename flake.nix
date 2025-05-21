@@ -27,6 +27,7 @@
 	  pkgs.neovim
 	  pkgs.fish
 	  pkgs.alacritty
+	  pkgs.the-unarchiver
         ];
 
 	homebrew = { enable = true;
