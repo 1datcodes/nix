@@ -41,6 +41,7 @@
 			"1password@7"
 			"spotify"
 			"steam"
+			"balenaetcher"
 		];
 		masApps = {
 		};
