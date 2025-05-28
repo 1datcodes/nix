@@ -26,8 +26,6 @@
 	  pkgs.raycast
 	  pkgs.neovim
 	  pkgs.fish
-	  pkgs.alacritty
-	  pkgs.the-unarchiver
     pkgs.kitty
         ];
 
