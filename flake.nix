@@ -28,6 +28,7 @@
 	  pkgs.fish
 	  pkgs.alacritty
 	  pkgs.the-unarchiver
+    pkgs.kitty
         ];
 
 	homebrew = { enable = true;
