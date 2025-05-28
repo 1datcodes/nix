@@ -55,7 +55,7 @@
 		dock.minimize-to-application = true;
 		dock.persistent-apps = [
 			"${pkgs.vscode}/Applications/Visual Studio Code.app"
-			"${pkgs.alacritty}/Applications/Alacritty.app"
+      "${pkgs.kitty}/Applications/kitty.app"
 			"/Applications/Brave Browser.app"
 			"/System/Applications/Messages.app"
 			"${pkgs.discord}/Applications/discord.app"
