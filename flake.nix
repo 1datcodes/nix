@@ -29,6 +29,8 @@
     pkgs.kitty
         ];
 
+      environment.variables.EDITOR = "nvim";
+
 	homebrew = { enable = true;
 		brews = [
 			"mas"
