@@ -26,7 +26,7 @@
 	  pkgs.raycast
 	  pkgs.neovim
 	  pkgs.fish
-    pkgs.kitty
+	  pkgs.kitty
         ];
 
 	homebrew = { enable = true;
@@ -93,6 +93,11 @@
 		};
 	};
 	environment.shells = [pkgs.fish];
+
+	# Environment variables
+	environment.sessionVariables = {
+		EDITOR = "nvim";
+	};
 	
 	users.users.michitanaka = {
 		shell = pkgs.fish;
@@ -129,7 +134,7 @@
 	fonts.fontconfig.enable = true;
 
 	home.sessionVariables = {
-		EDITOR = "vim";
+		EDITOR = "nvim";
 	};
 
 	home.file = {
