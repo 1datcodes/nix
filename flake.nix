@@ -27,6 +27,7 @@
 	  pkgs.neovim
 	  pkgs.fish
 	  pkgs.kitty
+	  pkgs.slack
         ];
 
 	homebrew = { enable = true;
@@ -94,11 +95,6 @@
 	};
 	environment.shells = [pkgs.fish];
 
-	# Environment variables
-	environment.sessionVariables = {
-		EDITOR = "nvim";
-	};
-	
 	users.users.michitanaka = {
 		shell = pkgs.fish;
 		name = "michitanaka";
