@@ -35,13 +35,14 @@
 			"mas"
 			"npm"
 			"node"
+      "starship"
 		];
 		casks = [
 			"brave-browser"
 			"1password@7"
 			"spotify"
 			"steam"
-			"balenaetcher"
+			"betterdiscord-installer"
 		];
 		masApps = {
 		};
