@@ -86,14 +86,12 @@
       # Necessary for using flakes on this system.
       nix.settings.experimental-features = "nix-command flakes";
 
-      # Enable alternative shell support in nix-darwin.
-	programs.fish = {
-		enable = true;
-		shellAliases = {
+  programs.fish = {
+      enable = true;
+      interactiveShellInit = "starship init fish | source";
+      loginShellInit = "starship init fish | source";
+    };
 
-		};
-
-	};
 	environment.shells = [pkgs.fish];
 
 	users.users.michitanaka = {
@@ -140,6 +138,7 @@
 
 	home.sessionVariables = {
 		EDITOR = "nvim";
+    SHELL = "fish";
 	};
 
 	home.file = {
