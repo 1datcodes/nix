@@ -35,7 +35,6 @@
 			"mas"
 			"npm"
 			"node"
-      "starship"
 		];
 		casks = [
 			"brave-browser"
@@ -93,6 +92,7 @@
 		shellAliases = {
 
 		};
+
 	};
 	environment.shells = [pkgs.fish];
 
@@ -126,7 +126,15 @@
 		pkgs.nerd-fonts.jetbrains-mono
 		pkgs.nerd-fonts._0xproto
 		pkgs.nerd-fonts.droid-sans-mono
+    starship
 	];
+
+  programs.starship = {
+      enable = true;
+      enableFishIntegration = true;
+      # Settings goes here 
+      # settings = {};
+    };
 
 	fonts.fontconfig.enable = true;
 
@@ -137,14 +145,8 @@
 	home.file = {
 		".vimrc".source = ./dotfiles/vim_config;
 	};
-	
-	# adding alias to fish
-	programs.fish = {
-		enable = true;
-		shellAliases = {
-		};
-	};
 
+  xdg.configFile."starship.toml".source = ./dotfiles/starship.toml;
 };
 
   in
