@@ -50,6 +50,8 @@
 		onActivation.upgrade = true;
 	};
 
+  system.primaryUser = "michitanaka";
+
 	system.defaults = {
 		dock.autohide = true;
 		dock.autohide-delay = 0.15;
