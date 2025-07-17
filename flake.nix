@@ -28,6 +28,7 @@
 	  pkgs.fish
 	  pkgs.kitty
 	  pkgs.slack
+    pkgs.spotify-player
         ];
 
 	homebrew = { enable = true;
