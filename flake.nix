@@ -150,6 +150,7 @@
 	};
 
   xdg.configFile."starship.toml".source = ./dotfiles/starship.toml;
+  xdg.configFile."aerospace.toml".source = ./dotfiles/aerospace.toml;
 };
 
   in
