@@ -43,6 +43,7 @@
 			"spotify"
 			"steam"
 			"betterdiscord-installer"
+      "nikitabobko/tap/aerospace"
 		];
 		masApps = {
 		};
