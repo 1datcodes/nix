@@ -81,4 +81,4 @@ else
 end
 
 # Pass remaining args ($argv) as extra flags to nixos-rebuild
-sudo nixos-rebuild switch --flake /etc/nixos\#pro --generation-label "$label" $argv
+sudo NIXOS_LABEL="$label" nixos-rebuild switch --flake /etc/nixos\#pro $remaining_args[2..-1]
