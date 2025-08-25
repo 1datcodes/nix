@@ -1,5 +1,4 @@
 # Auto generated system files
-hosts/*/hardware-configuration.nix
 flake.lock
 
 # Backup files created by home-manager
