@@ -13,8 +13,7 @@
 		pciutils
 		usbutils
 		tree
-		wl-copy
-		wl-paste
+    wl-clipboard
 	];
 
 	programs.git = {
