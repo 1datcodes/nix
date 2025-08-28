@@ -1,10 +1,7 @@
-{ config, inputs, pkgs, ... }:
-{
-	imports = [
-		../../modules/home
-	];
+{ config, inputs, pkgs, ... }: {
+  imports = [ ../../modules/home ];
 
-	programs.home-manager.enable = true;
+  programs.home-manager.enable = true;
 
-	home.stateVersion = "24.11";
+  home.stateVersion = "24.11";
 }
