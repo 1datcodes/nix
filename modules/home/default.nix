@@ -1,11 +1,11 @@
 {
-	imports = [
-		./catppuccin.nix
-		./cli.nix
-		./gui.nix
-		./programming.nix
-		./shell.nix
-    ./hyprland/
-	];
+  imports = [
+    ./catppuccin.nix
+    ./cli.nix
+    ./gui.nix
+    ./programming.nix
+    ./shell.nix
+    ./hyprland
+  ];
 }
-		
+
