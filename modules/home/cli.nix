@@ -26,7 +26,7 @@
     extraConfig = {
       credential.helper = "manager";
       credential."https://github.com".username = "1datcodes";
-      credential.credentialStore = "store";
+      credential.credentialStore = "plaintext";
     };
   };
 }
