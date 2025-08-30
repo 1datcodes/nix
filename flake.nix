@@ -44,6 +44,7 @@
 			"steam"
 			"betterdiscord-installer"
       "nikitabobko/tap/aerospace"
+      "balenaetcher"
 		];
 		masApps = {
 		};
