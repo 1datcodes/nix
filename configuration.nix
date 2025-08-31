@@ -111,7 +111,7 @@
   users.defaultUserShell = pkgs.fish;
 
   # Git
-  programs.git.enagle = true;
+  programs.git.enable = true;
 
 
   # Some programs need SUID wrappers, can be configured further or are
