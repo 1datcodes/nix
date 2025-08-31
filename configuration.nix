@@ -103,6 +103,8 @@
     git-lfs
     gcc
     fastfetch
+    ollama
+    avahi
   ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -114,6 +116,13 @@
   # Git
   programs.git.enable = true;
 
+
+  # Ollama
+  services.ollama = {
+	enable = true;
+	host = "0.0.0.0";
+	port = 11434;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
@@ -137,6 +146,16 @@
 
   networking.firewall.allowedTCPPorts = [ 22 ];
   networking.firewall.allowedUDPPorts = [ 22 ];
+
+  # Avahi for enabling dns
+  services.avahi = {
+      enable = true;
+      nssmdns4 = true;
+      publish.enable = true;
+      publish.addresses = true;
+      publish.domain = true;
+      publish.userServices = true;
+  };
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];
