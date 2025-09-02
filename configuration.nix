@@ -14,6 +14,12 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Swap memory
+  swapDevices = [{
+	device = "/var/swapfile";
+	size = 16 * 1024
+  }];
+
   # Disable suspend/sleep
   services.logind.lidSwitch = "ignore";
   services.logind.hibernateKey = "ignore";
