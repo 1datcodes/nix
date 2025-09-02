@@ -79,6 +79,7 @@
      git-lfs
      git-credential-manager
      avahi
+     fastfetch
   ];
 
   programs.fish.enable = true;
