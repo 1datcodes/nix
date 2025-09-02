@@ -25,6 +25,8 @@
     HandleSuspendKey=ignore
     HandleHibernateKey=ignore
   '';
+  powerManagement.enable = true;
+  powerManagement.powertop.enable = true;
 
   networking.hostName = "m1air"; # Define your hostname.
   # Pick only one of the below networking options.
