@@ -16,11 +16,9 @@
 
   # Disable suspend/sleep
   services.logind.lidSwitch = "ignore";
-  services.logind.extraConfig = ''
-	IdleAction=ignore
-	HandleSuspendKey=ignore
-	HandleHibernateKey=ignore
-  '';
+  services.logind.hibernateKey = "ignore";
+  services.logind.suspendKey = "ignore";
+  services.logind.extraConfig = "IdleAction=ignore";
   powerManagement.enable = true;
   powerManagement.powertop.enable = true;
 
