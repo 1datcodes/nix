@@ -17,7 +17,7 @@
   # Swap memory
   swapDevices = [{
 	device = "/var/swapfile";
-	size = 16 * 1024
+	size = 16 * 1024;
   }];
 
   # Disable suspend/sleep
