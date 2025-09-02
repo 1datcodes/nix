@@ -86,6 +86,7 @@
      git-credential-manager
      avahi
      fastfetch
+     ollama
   ];
 
   programs.fish.enable = true;
@@ -100,6 +101,12 @@
   # };
 
   # List services that you want to enable:
+
+  # Ollama
+  services.ollama = {
+	enable = true;
+	host = "0.0.0.0";
+  };
 
   # Enable the OpenSSH daemon.
   services.openssh = {
