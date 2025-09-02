@@ -14,6 +14,16 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
+  # Disable suspend/sleep
+  services.logind.lidSwitch = "ignore";
+  services.logind.extraConfig = ''
+	IdleAction=ignore
+	HandleSuspendKey=ignore
+	HandleHibernateKey=ignore
+  '';
+  powerManagement.enable = true;
+  powerManagement.powertop.enable = true;
+
   networking.hostName = "intelmbp"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
