@@ -129,9 +129,8 @@
 
   # Ollama
   services.ollama = {
-	enable = true;
-	host = "0.0.0.0";
-	port = 11434;
+    enable = true;
+    host = "0.0.0.0";
   };
 
   # Some programs need SUID wrappers, can be configured further or are
