@@ -18,6 +18,14 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = false;
 
+  # Disable sleep/suspend
+  services.logind.lidSwitch = "ignore";
+  services.logind.extraConfig = ''
+    IdleAction=ignore
+    HandleSuspendKey=ignore
+    HandleHibernateKey=ignore
+  '';
+
   networking.hostName = "m1air"; # Define your hostname.
   # Pick only one of the below networking options.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
