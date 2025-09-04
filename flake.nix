@@ -9,9 +9,13 @@
 		};
 		catppuccin.url = "github:catppuccin/nix";
 		hyprland.url = "github:hyprwm/Hyprland";
+    quickshell = {
+      url = "github:quickshell-mirror/quickshell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
 	};
 
-	outputs = { self, nixpkgs, home-manager, catppuccin, hyprland, ... }@inputs: {
+	outputs = { self, nixpkgs, home-manager, catppuccin, hyprland, quickshell, ... }@inputs: {
 		nixosConfigurations = {
 			pro = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
