@@ -16,7 +16,7 @@
 
       background = [{
         path = "~/Wallpaper/link-click-1.png";
-        "blur_passes" = 3;
+        "blur_passes" = 2;
         color = "$base";
       }];
 
@@ -60,6 +60,31 @@
           halign = "center";
           valign = "center";
         }
+        #{
+        #  text = "󰤄";
+        #  color = "$accent";
+        #  "font_size" = 24;
+        #  position = "-100, -108";
+        #  halign = "center";
+        #  valign = "center";
+        #}
+        #{
+        #  text = "";
+        #  color = "$accent";
+        #  "font_size" = 24;
+        #  position = "0, -108";
+        #  halign = "center";
+        #  valign = "center";
+        #  onclick = "";
+        #}
+        #{
+        #  text = "⏻";
+        #  color = "$accent";
+        #  "font_size" = 24;
+        #  position = "100, -108";
+        #  halign = "center";
+        #  valign = "center";
+        #}
       ];
 
       input-field = {
