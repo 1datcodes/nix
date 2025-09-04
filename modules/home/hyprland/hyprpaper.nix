@@ -1,17 +1,12 @@
-{ config, inputs, pkgs, ... }:
-{
-	# Hyprpaper
-	services.hyprpaper = {
-		enable = true;
+{ config, inputs, pkgs, ... }: {
+  # Hyprpaper
+  services.hyprpaper = {
+    enable = true;
 
-		settings = {
-			preload = [
-				"/home/michitanaka/Wallpaper/harbor.jpg"
-			];
+    settings = {
+      preload = [ "/home/michitanaka/Wallpaper/link-click-1.png" ];
 
-			wallpaper = [
-				", /home/michitanaka/Wallpaper/harbor.jpg"
-			];
-		};
-	};
+      wallpaper = [ ", /home/michitanaka/Wallpaper/link-click-1.png" ];
+    };
+  };
 }
