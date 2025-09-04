@@ -16,14 +16,14 @@
 
       background = [{
         path = "~/Wallpaper/link-click-1.png";
-        "blur_passes" = 2;
+        "blur_passes" = 1;
         color = "$base";
       }];
 
       image = [{
         path = "~/Pictures/moon-cat.jpg";
         size = 220;
-        position = "0, 175";
+        position = "0, -125";
         "border_size" = 6;
         "border_color" = "$accent";
         halign = "center";
@@ -37,7 +37,7 @@
           color = "$text";
           "font_size" = 115;
           "font_family" = "$font";
-          position = "0, 600";
+          position = "0, 400";
           halign = "center";
           valign = "center";
         }
@@ -48,7 +48,7 @@
           color = "$text";
           "font_size" = 25;
           "font_family" = "$font";
-          position = "0, 510";
+          position = "0, 310";
           halign = "center";
           valign = "center";
         }
@@ -56,7 +56,7 @@
           text =
             "<span foreground='##$textAlpha'>Welcome back, <span foreground='##$accentAlpha'>Master</span></span>";
           "font_size" = 16;
-          position = "0, 20";
+          position = "0, -280";
           halign = "center";
           valign = "center";
         }
@@ -89,7 +89,7 @@
 
       input-field = {
         #monitor = "desc:LG Electronics LG UltraFine 704NTWGFD161";
-        size = "300, 60";
+        size = "400, 60";
         "outline_thickness" = 4;
         "dots_size" = 0.2;
         "dots_spacing" = 0.2;
@@ -105,7 +105,7 @@
         "fail_color" = "$red";
         "fail_text" = "<i>$FAIL <b>($ATTEMPTS)</b></i>";
         "capslock_color" = "$yellow";
-        position = "0, -47";
+        position = "0, -347";
         halign = "center";
         valign = "center";
       };
