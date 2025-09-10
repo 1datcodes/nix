@@ -1,46 +1,45 @@
-{ config, inputs, pkgs, ...}:
+{ config, inputs, pkgs, ... }:
 
 {
-	# Bootloader/Systemd
-	boot.loader.systemd-boot.enable = true;
-	boot.loader.efi.canTouchEfiVariables = true;
-	
-	# Load i2c-dev
-	boot.kernelModules = [ "i2c-dev" ];
+  # Bootloader/Systemd
+  boot.loader.systemd-boot.enable = true;
+  boot.loader.efi.canTouchEfiVariables = true;
 
-	# amdgpu driver
-	boot.kernelParams = [
-		"amdgpu.dc=1"
-		"amdgpu.dpm=1"
-		"radeon.si_support=0"
-		"radeon.cik_support=0"
-		"amdgpu.si_support=1"
-		"amdgpu.cik_support=1"
-	];
+  # Load i2c-dev
+  boot.kernelModules = [ "i2c-dev" ];
 
-	# OpenGL
-	hardware.graphics.enable = true;
+  # amdgpu driver
+  boot.kernelParams = [
+    "amdgpu.dc=1"
+    "amdgpu.dpm=1"
+    "radeon.si_support=0"
+    "radeon.cik_support=0"
+    "amdgpu.si_support=1"
+    "amdgpu.cik_support=1"
+  ];
 
-	# Allow Broadcom drivers
-	nixpkgs.config.permittedInsecurePackages = [
-		"broadcom-sta-6.30.223.271-57-6.12.43"
-	];
+  # OpenGL
+  hardware.graphics.enable = true;
 
-	# Add ddcutil to sudoers
-	security.sudo = {
-		enable = true;
-		extraRules = [{
-			users = [ "michitanaka" ];
-			commands = [{
-				command = "${pkgs.ddcutil}/bin/ddcutil";
-				options = [ "NOPASSWD" ];
-			}];
-		}];
-	};
+  # Allow Broadcom drivers
+  nixpkgs.config.permittedInsecurePackages =
+    [ "broadcom-sta-6.30.223.271-57-6.12.46" ];
 
-	# Add swap memory
-	swapDevices = [{
-		device = "/var/lib/swapfile";
-		size = 32 * 1024;
-	}];
+  # Add ddcutil to sudoers
+  security.sudo = {
+    enable = true;
+    extraRules = [{
+      users = [ "michitanaka" ];
+      commands = [{
+        command = "${pkgs.ddcutil}/bin/ddcutil";
+        options = [ "NOPASSWD" ];
+      }];
+    }];
+  };
+
+  # Add swap memory
+  swapDevices = [{
+    device = "/var/lib/swapfile";
+    size = 32 * 1024;
+  }];
 }
