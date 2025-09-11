@@ -1,15 +1,15 @@
-{ config, inputs, pkgs, ... }:
-{
-	home.packages = with pkgs; [
-		waybar
-		wofi
-		hyprpaper
-		hypridle
-		hyprlock
-		hyprcursor
-		hyprshot
-		playerctl
-		pavucontrol
-		wlogout
-	];
+{ config, inputs, pkgs, ... }: {
+  home.packages = with pkgs; [
+    waybar
+    wofi
+    hyprpaper
+    hyprpanel
+    hypridle
+    hyprlock
+    hyprcursor
+    hyprshot
+    playerctl
+    pavucontrol
+    wlogout
+  ];
 }
