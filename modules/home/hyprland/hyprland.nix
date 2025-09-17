@@ -45,6 +45,8 @@
         "desc:LG Electronics LG ULTRAGEAR 107NTKFCQ421, 2560x1440, auto-right, 1"
       ];
 
+      xwayland = { "force_zero_scaling" = true; };
+
       # Keybinds
       bind = [
         "$mod, RETURN, exec, $terminal"
@@ -191,12 +193,6 @@
           "workspacesOut, 1, 1.94, almostLinear, fade"
         ];
       };
-
-      windowrule = [
-        "workspace 3, class:legcord"
-        "workspace 3, title:spotify_player"
-        "workspace 2, class:brave-browser"
-      ];
     };
   };
 }
