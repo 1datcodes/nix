@@ -13,10 +13,11 @@
       url = "github:quickshell-mirror/quickshell";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    spicetify-nix.url = "github:Gerg-L/spicetify-nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, catppuccin, hyprland, quickshell, ...
-    }@inputs: {
+  outputs = { self, nixpkgs, home-manager, catppuccin, hyprland, quickshell
+    , spicetify-nix, ... }@inputs: {
       nixosConfigurations = {
         pro = nixpkgs.lib.nixosSystem {
           system = "x86_64-linux";
@@ -34,6 +35,7 @@
                 imports = [
                   ./home/michitanaka/home.nix
                   catppuccin.homeModules.catppuccin
+                  spicetify-nix.homeManagerModules.spicetify
                 ];
               };
             }

@@ -1,8 +1,6 @@
 { config, inputs, pkgs, ... }: {
   home.packages = with pkgs; [
-    discord
-    legcord
-    spotify
+    vesktop
     brave
     _1password-gui
     qimgv
