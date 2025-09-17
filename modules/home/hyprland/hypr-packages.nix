@@ -1,6 +1,6 @@
 { config, inputs, pkgs, ... }: {
   home.packages = with pkgs; [
-    waybar
+    #waybar
     wofi
     hyprpaper
     hyprpanel

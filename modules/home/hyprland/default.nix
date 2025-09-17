@@ -6,7 +6,8 @@
     ./hyprland.nix
     ./hyprlock.nix
     ./hyprpaper.nix
-    ./waybar.nix
+    ./hyprpanel.nix
+    #./waybar.nix
     ./wlogout.nix
     ./wofi.nix
   ];
