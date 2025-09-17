@@ -10,7 +10,7 @@
     gcc
 
     # Hyprland related
-    swaynotificationcenter
+    #swaynotificationcenter
     libnotify
     pipewire
     wireplumber
