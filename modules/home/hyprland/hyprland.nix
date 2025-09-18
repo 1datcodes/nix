@@ -92,8 +92,15 @@
         "$mod SHIFT, 0, movetoworkspace, 0"
 
         # Scratch pad
-        "$mod, S, togglespecialworkspace, magic"
-        "$mod SHIFT, S, movetoworkspace, special:magic"
+        "$mod, S, togglespecialworkspace, scratchpad"
+        "$mod SHIFT, S, movetoworkspace, special:scratchpad"
+
+        # Minimize effect
+        "ALT, H, togglespecialworkspace, hidden"
+        "ALT, H, movetoworkspace, +0"
+        "ALT, H, togglespecialworkspace, hidden"
+        "ALT, H, movetoworkspace, special:hidden"
+        "ALT, H, togglespecialworkspace, hidden"
 
         # Screenshot
         "$mod, P, exec, hyprshot -m region -o /home/michitanaka/Pictures/Screenshots -- qimgv"
@@ -193,6 +200,22 @@
           "workspacesOut, 1, 1.94, almostLinear, fade"
         ];
       };
+
+      windowrule = [
+        "center 1, floating:1, xwayland:0"
+        "float, class:blueman-manager"
+        # Special workspaces
+        "workspace special:sysmon, class:btop"
+        "workspace special:music, class:spotify"
+        "workspace special:music, initialTitle:Spotify Premium"
+        "workspace special:comms, class:vesktop|discord"
+        "workspace special:garbage, class:xwaylandvideobridge"
+      ];
+
+      workspace = [
+        "1, monitor:desc:LG Electronics LG UltraFine 704NTWGFD161, default:true"
+        "2, monitor:desc:LG Electronics LG ULTRAGEAR 107NTKFCQ421, default:true"
+      ];
     };
   };
 }
