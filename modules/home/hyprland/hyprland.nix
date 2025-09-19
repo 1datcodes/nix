@@ -102,6 +102,9 @@
         "ALT, H, movetoworkspace, special:hidden"
         "ALT, H, togglespecialworkspace, hidden"
 
+        # Toggle between special workspaces
+        "ALT, S, exec, ~/nixos-config/scripts/cycle_special_ws.sh"
+
         # Screenshot
         "$mod, P, exec, hyprshot -m region -o /home/michitanaka/Pictures/Screenshots -- qimgv"
         "$mod SHIFT, P, exec, hyprshot -m output -o /home/michitanaka/Pictures/Screenshots -- qimgv"

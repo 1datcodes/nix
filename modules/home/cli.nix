@@ -14,6 +14,7 @@
     tree
     wl-clipboard
     caligula
+    jq
   ];
 
   programs.git = {
