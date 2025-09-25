@@ -16,19 +16,20 @@
       # List packages installed in system profile. To search by name, run:
       # $ nix-env -qaP | grep wget
       nixpkgs.config.allowUnfree = true;
-      environment.systemPackages =
+      environment.systemPackages = with pkgs;
         [ 
-	  pkgs.git
-	  pkgs.git-lfs
-	  pkgs.git-credential-manager
-	  pkgs.vscode
-	  pkgs.discord
-	  pkgs.raycast
-	  pkgs.neovim
-	  pkgs.fish
-	  pkgs.kitty
-	  pkgs.slack
-    pkgs.spotify-player
+          git
+          git-lfs
+          git-credential-manager
+          vscode
+          discord
+          raycast
+          neovim
+          fish
+          kitty
+          slack
+          spotify-player
+          python3
         ];
 
 	homebrew = { enable = true;
