@@ -30,6 +30,8 @@
           slack
           spotify-player
           python3
+          cmake
+          ninja
         ];
 
 	homebrew = { enable = true;
