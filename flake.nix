@@ -30,8 +30,6 @@
           slack
           spotify-player
           python3
-          cmake
-          ninja
         ];
 
 	homebrew = { enable = true;
@@ -39,6 +37,9 @@
 			"mas"
 			"npm"
 			"node"
+      "cmake"
+      "ninja"
+      "arm-gcc-bin"
 		];
 		casks = [
 			"brave-browser"
@@ -49,6 +50,9 @@
       "nikitabobko/tap/aerospace"
       "balenaetcher"
 		];
+    taps = [
+      "osx-cross/arm"
+    ];
 		masApps = {
 		};
 		onActivation.cleanup = "zap";
@@ -63,12 +67,6 @@
 		dock.autohide-delay = 0.15;
 		dock.minimize-to-application = true;
 		dock.persistent-apps = [
-			"${pkgs.vscode}/Applications/Visual Studio Code.app"
-      "${pkgs.kitty}/Applications/kitty.app"
-			"/Applications/Brave Browser.app"
-			"/System/Applications/Messages.app"
-			"${pkgs.discord}/Applications/discord.app"
-			"/Applications/Spotify.app"
 		];
 		finder.FXPreferredViewStyle = "clmv";
 		loginwindow.GuestEnabled = false;
