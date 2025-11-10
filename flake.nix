@@ -29,7 +29,6 @@
           kitty
           slack
           spotify-player
-          python3
         ];
 
 	homebrew = { enable = true;
@@ -40,6 +39,9 @@
       "cmake"
       "ninja"
       "arm-gcc-bin"
+      "tcl-tk"
+      "python3"
+      "python-tk"
 		];
 		casks = [
 			"brave-browser"
