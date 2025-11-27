@@ -4,14 +4,7 @@
     ./gui.nix
     ./programming.nix
     ./shell.nix
-    ./spicetify.nix
-    ./spicetify.nix
-    ./spicetify.nix
-    ./spicetify.nix
-    ./spicetify.nix
-    ./spicetify.nix
-    ./spicetify.nix
-    ./spicetify.nix
+    #./spicetify.nix
     ./hyprland
     ./quickshell
   ];
