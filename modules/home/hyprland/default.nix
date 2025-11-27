@@ -1,6 +1,6 @@
 {
   imports = [
-    #./catppuccin.nix
+    ./catppuccin.nix
     ./hypr-packages.nix
     ./hypridle.nix
     ./hyprland.nix
