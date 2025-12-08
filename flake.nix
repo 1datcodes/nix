@@ -29,6 +29,7 @@
           kitty
           slack
           spotify-player
+          ollama
         ];
 
 	homebrew = { enable = true;
